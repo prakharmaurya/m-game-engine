@@ -1,0 +1,14 @@
+// protoc --go_out=plugins=grpc:. *.proto
+syntax = "proto3";
+
+option go_package = "/api";
+
+service GameEngine {
+  rpc GetSize(GetSizeRequest) returns (GetSizeResponse);
+  rpc SetScore(SetScoreRequest) returns (SetScoreResponse);
+}
+
+message GetSizeRequest {}
+message GetSizeResponse { double size = 1; }
+message SetScoreRequest { double score = 1; }
+message SetScoreResponse { bool set = 1; }
