@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	var addressPtr = flag.String("address", ":50051", "addresss where you can connect to m-game-engine service")
+	var addressPtr = flag.String("address", ":60051", "addresss where you can connect to m-game-engine service")
 	flag.Parse()
 
 	s := grpc.NewServer(*addressPtr)
