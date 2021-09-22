@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	var addressPtr = flag.String("address", "localhost:50051", "address to connect")
+	var addressPtr = flag.String("address", "localhost:60051", "address to connect")
 	flag.Parse()
 
 	con, err := grpc.Dial(*addressPtr, grpc.WithInsecure())
